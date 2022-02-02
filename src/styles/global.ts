@@ -26,12 +26,3 @@ export default createGlobalStyle`
       }
   `}
 `
-
-//        <Content data-cy="content">
-//             <Title data-cy="title">
-//                 Sudoku
-//             </Title>
-//             <Card data-cy="card">
-//                 Hello world
-//             </Card>
-//         </Content>
