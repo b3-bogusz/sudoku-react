@@ -1,5 +1,5 @@
 import { GRID, NUMBERS } from 'typings'
-import { identifySquare,isInRow, isInCol, isInSquare, shuffle} from 'utils';
+import { identifySquare,isInRow, isInCol, isInSquare, checkGrid, shuffle} from 'utils';
 import identifyWorkingSquare from "../identify-square";
 
 
@@ -49,8 +49,9 @@ function fillGrid(grid: GRID) {
 
                         grid[row][col] = value
                         //check grid if it is full, if yes, stop and return
-
+                        if (checkGrid(grid)) return true
                         //otherwise we run fillGrid(grid)
+                        else if (fillGrid(grid)) return true
                     }
                 }
             }
