@@ -1,5 +1,7 @@
 import { GRID, NUMBERS } from 'typings'
-import { isInRow, isInCol, shuffle} from 'utils';
+import { identifySquare,isInRow, isInCol, isInSquare, shuffle} from 'utils';
+import identifyWorkingSquare from "../identify-square";
+
 
 const gridExample = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -41,7 +43,8 @@ function fillGrid(grid: GRID) {
 
                     if (!isInCol({ col, grid, value })) {
                         //is it not on the grid square?
-
+                        const square = identifySquare({ col, grid, row })
+                        if (!isInSquare({ square, value}))
                         // ....... if this is the case
 
                         grid[row][col] = value
