@@ -12,8 +12,8 @@ interface IInput {
  * if the value is already being used in the current grid row
  * @param input Object with 99x9 Sudoku Grid, row index and value
  */
-function isinRow({ grid, row, value } : IInput): boolean {
+function isInRow({ grid, row, value } : IInput): boolean {
     return grid[row].includes(value)
 }
 
-export default isinRow;
+export default isInRow;
