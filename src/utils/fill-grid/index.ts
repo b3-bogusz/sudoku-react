@@ -41,6 +41,7 @@ function fillGrid(grid: GRID) {
 
                     if (!isInCol({ col, grid, value })) {
                         //is it not on the grid square?
+
                         // ....... if this is the case
 
                         grid[row][col] = value
