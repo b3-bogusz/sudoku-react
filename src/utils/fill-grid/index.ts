@@ -9,7 +9,6 @@ const numbers: NUMBERS[] = [1, 2, 3, 4, 5, 6, 7, 8, 9]
  * until a solution is found
  * @param grid
  */
-
 function fillGrid(grid: GRID) {
     let row = 0;
     let col = 0;
@@ -20,13 +19,12 @@ function fillGrid(grid: GRID) {
 
         if (grid[row][col] === 0) {
             shuffle(numbers)
-            //do stuff
             for (let value of numbers) {
                 //is it not in grid row?
                 if (!isInRow({ grid, row, value }))
-                    // is it not in grid col?
-                    if (!isInCol({ col, grid, value })) {
-                        //is it not on the grid square?
+                    //is it not in grid col?
+                    if (!isInCol({ grid, col, value })) {
+                        //is it not in the grid square?
                         const square = identifySquare({ col, grid, row })
                         if (!isInSquare({ square, value})) {
                             // ....... if this is the case
