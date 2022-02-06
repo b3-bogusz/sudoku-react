@@ -29,18 +29,23 @@ export const Row = styled.div`
     div {
       &:nth-child(1) {
         border-left: solid 4px ${theme.colors.black};
-        background-color: yellow;
+        background-color: lightblue;
+      }
+      &:nth-child(2),
+      &:nth-child(5),
+      &:nth-child(8) {
+        background-color: lightskyblue;
       }
       &:nth-child(3),
       &:nth-child(6),
       &:nth-child(9) {
         border-right: solid 4px ${theme.colors.black};
-        background-color: red;
+        background-color: skyblue;
       }
       &:nth-child(4),
       &:nth-child(7) {
         border-left: none;
-        background-color: magenta;
+        background-color: lightblue;
       }
     }
   `}
