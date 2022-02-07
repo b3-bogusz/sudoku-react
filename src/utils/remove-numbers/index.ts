@@ -17,10 +17,8 @@ function removeNumbers(grid: GRID, attempts = 5): GRID {
             row = getRandomIndex()
             col = getRandomIndex()
         }
-
         const backup = grid[row][col]
         grid[row][col] = 0
-
         //copy grid
         const gridCopy = copyGrid(grid)
         //set a global counter
@@ -32,11 +30,6 @@ function removeNumbers(grid: GRID, attempts = 5): GRID {
             grid[row][col] = backup
             attempts--
         }
-        //if global counter is not 1
-
-        //grid[row][col] = backup
-
-        //decrement attempt
     }
     return grid
 }
